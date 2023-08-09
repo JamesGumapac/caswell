@@ -1,0 +1,38 @@
+var celigotest1 = function(){
+r = nlapiTransformRecord("invoice", 3528727, "creditmemo", {});
+r.setFieldValue("custbody_celigo_etail_refund_id", "846839873610");
+r.setFieldValue("custbody_celigo_etail_refund_exp", "T");
+r.setFieldValue("custbody_celigo_etail_transaction_ids", "re_3LSuIQJOxOaAAVzP1cr9o1OM");
+r.setFieldValue("custbody_cm_order_type", 5);
+r.setFieldValue("department", 33);
+r.setFieldValue("location", 7);
+r.setFieldValue("discountitem", 23341);
+r.setFieldValue("shippingcost", 0);
+r.setFieldValue("discountrate", -10.8);
+r.setFieldValue("custbody_celigo_shpfy_transaction_ids", "5549549027402");
+r.selectLineItem("item", 3);
+//r.removeCurrentLineItemSubrecord("item", "inventorydetail");
+r.setCurrentLineItemValue("item", "custcol_celigo_etail_order_line_id", 11395672899658);
+r.setCurrentLineItemValue("item", "department", 33);
+r.setCurrentLineItemValue("item", "line", "3");
+r.setCurrentLineItemValue("item", "quantity", 0);
+r.setCurrentLineItemValue("item", "amount", "36.00");
+r.commitLineItem("item");
+r.selectLineItem("item", 1);
+//r.removeCurrentLineItemSubrecord("item", "inventorydetail");
+r.setCurrentLineItemValue("item", "custcol_celigo_etail_order_line_id", 11395672834122);
+r.setCurrentLineItemValue("item", "department", 33);
+r.setCurrentLineItemValue("item", "line", "1");
+r.setCurrentLineItemValue("item", "quantity", 0);
+r.setCurrentLineItemValue("item", "amount", "18.00");
+r.commitLineItem("item");
+r.selectLineItem("item", 2);
+//r.removeCurrentLineItemSubrecord("item", "inventorydetail");
+r.setCurrentLineItemValue("item", "custcol_celigo_etail_order_line_id", 11395672866890);
+r.setCurrentLineItemValue("item", "department", 33);
+r.setCurrentLineItemValue("item", "line", "2");
+r.setCurrentLineItemValue("item", "quantity", 0);
+r.setCurrentLineItemValue("item", "amount", "18.00");
+r.commitLineItem("item");
+nlapiSubmitRecord(r, false, false);
+}
